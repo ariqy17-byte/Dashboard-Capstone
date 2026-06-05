@@ -647,7 +647,7 @@ with tab_b:
         z=hm_means.values.tolist(), x=heatmap_labels, y=cat_labels_hm,
         text=annotations, texttemplate="%{text}",
         textfont=dict(size=12, color="white"),
-        colorscale="Blues", showscale=True,
+        colorscale="Reds", showscale=True,
         hovertemplate="<b>%{y}</b><br>%{x}: %{z:.2f}<extra></extra>",
     ))
     fig_hm.update_layout(
