@@ -263,7 +263,8 @@ def ax_style(grid=True):
 # ── Load Data ──────────────────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_csv("obesity_processed.csv")
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    df = pd.read_csv(os.path.join(base_dir, "obesity_processed.csv"))
     df["NObeyesdad"] = pd.Categorical(df["NObeyesdad"], categories=CAT_ORDER, ordered=True)
     df["AgeGroup"] = pd.cut(
         df["Age"],
